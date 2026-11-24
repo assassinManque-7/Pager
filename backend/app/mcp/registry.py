@@ -1,0 +1,13 @@
+TRUSTED_SERVERS={"pager-monitoring","pager-deployments","pager-runbooks","pager-memory","pager-sandbox"}
+TOOLS={
+ "get_metrics":{"server":"pager-monitoring","tier":"read_only","readOnlyHint":True},
+ "get_logs":{"server":"pager-monitoring","tier":"read_only","readOnlyHint":True},
+ "get_db_diagnostics":{"server":"pager-monitoring","tier":"read_only","readOnlyHint":True},
+ "get_deployments":{"server":"pager-deployments","tier":"read_only","readOnlyHint":True},
+ "read_runbook":{"server":"pager-runbooks","tier":"read_only","readOnlyHint":True},
+ "search_incident_memory":{"server":"pager-memory","tier":"read_only","readOnlyHint":True},
+ "rollback_deployment":{"server":"pager-sandbox","tier":"production_write","readOnlyHint":False},
+ "scale_workers":{"server":"pager-sandbox","tier":"nonprod_write","readOnlyHint":False},
+ "restart_staging":{"server":"pager-sandbox","tier":"nonprod_write","readOnlyHint":False},
+ "drop_database":{"server":"pager-sandbox","tier":"destructive","destructiveHint":True}
+}
